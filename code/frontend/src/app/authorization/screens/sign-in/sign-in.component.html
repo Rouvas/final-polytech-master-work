@@ -1,0 +1,19 @@
+<div class="max-w-[1350px] mx-auto h-full flex flex-nowrap space-x-[140px]">
+  <div class="relative h-[493px] my-auto w-full">
+    <img class="object-contain" ngSrc="/assets/auth/signin.png" alt="" fill priority>
+  </div>
+  <div class="h-full justify-center flex flex-col space-y-6 min-w-[464px]">
+    <h1 class="font-medium text-4xl text-black">Вход в систему</h1>
+    <form [formGroup]="loginForm" class="rounded bg-[#E5EFFB] px-5 py-8 flex flex-col">
+      <tui-input [tuiHintContent]="'Введите email'" [tuiTextfieldCleaner]="true" class="mb-2">
+        Почта
+        <span class="tui-required"></span>
+        <input formControlName="email" autocomplete="email" placeholder="mail@mail.ru" tuiTextfield type="email"/>
+      </tui-input>
+      <tui-input-password class="tui-space_top-2" formControlName="password">
+        Пароль
+        <input formControlName="password" autocomplete="password" placeholder="********" tuiTextfield/>
+      </tui-input-password>
+    </form>
+  </div>
+</div>
